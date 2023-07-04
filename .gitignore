@@ -48,6 +48,7 @@ Thumbs.db
 *.mov
 *.wmv
 
-mochawesome-report/
+mochawesome/
 eslint-report.html
 build
+aws-credentials.json

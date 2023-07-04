@@ -1,6 +1,7 @@
 const request = require("supertest");
-//require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
-//const { apiUrl, env } = require("../utils/env-utils");
+//Enable line no 3 and 4 if you're using Mac
+/* require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
+const { apiUrl, env } = require("../utils/env-utils"); */
 const logger = require("../logger-factory")(__filename);
 
 const api = request(`${process.env.API_URL}\\`);

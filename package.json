@@ -13,6 +13,7 @@
     "reqres-dev": "env-cmd -f .env.dev mocha test/reqres/**/*.js --timeout 0s --reporter mochawesome -reporter-options reportDir=mochawesome/reqres-regression-dev,reportFilename=reqres-regression",
     "reqres-qa-sanity": "env=qa files=test/reqres/**/**.sanity.js fileName=reqres-sanity npm run test",
     "reqres-qa": "env=qa files=test/reqres/**/**.js fileName=reqres npm run test",
+    "upload-report-s3": "npx s3-folder-upload build",
     "lint": "eslint . --max-warnings 15 -f html -o eslint-report.html",
     "lint-fix": "eslint . --fix",
     "lint-file": "eslint $file -f html -o eslint-report.html",
@@ -33,7 +34,8 @@
     "lodash": "^4.17.21",
     "pino": "^8.4.0",
     "pino-pretty": "^9.0.0",
-    "supertest": "^6.2.4"
+    "supertest": "^6.2.4",
+    "s3-folder-upload": "^2.3.5"
   },
   "author": "Munirathinam",
   "license": "ISC"
