@@ -1,0 +1,17 @@
+env:
+  browser: true
+  commonjs: true
+  es2021: true
+  mocha: true
+extends:
+  - airbnb-base
+  - plugin:mocha/recommended
+plugins:
+  - mocha
+pareserOptions:
+  ecmaVersion: 13
+rules:
+  indent: ['warn', 4]
+  max-len: ['warn', 150]
+  comma-dangle: off
+  mocha/no-mocha-arrows: off

@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-04T07:09:56.226Z",
+    "end": "2023-07-04T07:09:56.865Z",
+    "duration": 639,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6accf84c-54a8-4a3f-9371-d723e3adc488",
+      "title": "",
+      "fullFile": "D:\\Projects\\API Automation\\api-automation-javascript\\test\\reqres\\api-test.js",
+      "file": "\\test\\reqres\\api-test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ce12bfe-722b-407a-9de5-62cd6ecccf33",
+          "title": "Sample Test in https://reqres.in/",
+          "fullFile": "D:\\Projects\\API Automation\\api-automation-javascript\\test\\reqres\\api-test.js",
+          "file": "\\test\\reqres\\api-test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get User Details",
+              "fullTitle": "Sample Test in https://reqres.in/ Get User Details",
+              "timedOut": false,
+              "duration": 624,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await usersApi.getUserByUserId(userId);",
+              "err": {},
+              "uuid": "7418f0e8-59d0-4e8e-a47a-347d8108378e",
+              "parentUUID": "2ce12bfe-722b-407a-9de5-62cd6ecccf33",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7418f0e8-59d0-4e8e-a47a-347d8108378e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 624,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "reqres-regression",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome/reqres-regression-dev",
+        "reportFilename": "reqres-regression"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

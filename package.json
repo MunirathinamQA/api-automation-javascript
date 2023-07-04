@@ -1,0 +1,40 @@
+{
+  "name": "api-automation-javascript",
+  "version": "1.0.0",
+  "description": "API Automation",
+  "main": "index.js",
+  "engines": {
+    "node": "16.16.0"
+  },
+  "scripts": {
+    "pretest": "rm -rf mochawesome",
+    "test": "mocha tests/**/*.js mocha $files --timeout 0s --reporter mochawesome -reporter-options reportDir=build/$fileName-$env-$(date \"+%d-%b-%Y-%H-%M-%S\"),reportFilename=$fileName",
+    "reqres-dev-sanity": "env-cmd -f .env.dev mocha test/reqres/**/*.js --timeout 0s --reporter mochawesome -reporter-options reportDir=mochawesome/reqres-sanity-dev,reportFilename=reqres-sanity",
+    "reqres-dev": "env-cmd -f .env.dev mocha test/reqres/**/*.js --timeout 0s --reporter mochawesome -reporter-options reportDir=mochawesome/reqres-regression-dev,reportFilename=reqres-regression",
+    "reqres-qa-sanity": "env=qa files=test/reqres/**/**.sanity.js fileName=reqres-sanity npm run test",
+    "reqres-qa": "env=qa files=test/reqres/**/**.js fileName=reqres npm run test",
+    "lint": "eslint . --max-warnings 15 -f html -o eslint-report.html",
+    "lint-fix": "eslint . --fix",
+    "lint-file": "eslint $file -f html -o eslint-report.html",
+    "lint-file-fix": "eslint $file --fix"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3"
+  },
+  "dependencies": {
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.1",
+    "env-cmd": "^10.1.0",
+    "lodash": "^4.17.21",
+    "pino": "^8.4.0",
+    "pino-pretty": "^9.0.0",
+    "supertest": "^6.2.4"
+  },
+  "author": "Munirathinam",
+  "license": "ISC"
+}
